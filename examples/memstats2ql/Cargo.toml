@@ -1,0 +1,42 @@
+[package]
+name = "memstats2ql"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.rs-memstats2ql]
+path = "../.."
+
+[dependencies.tokio]
+version = "1"
+default-features = false
+features = [
+	"macros",
+	"net",
+	"rt-multi-thread",
+]
+
+[dependencies.axum]
+version = "0"
+default-features = false
+features = [
+	"http1",
+	"json",
+	"matched-path",
+	"original-uri",
+	"query",
+	"tokio",
+	"tower-log",
+	"tracing",
+]
+
+[dependencies.async-graphql-axum]
+version = "7"
+default-features = false
+features = [
+]
