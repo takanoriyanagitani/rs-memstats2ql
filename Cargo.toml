@@ -1,0 +1,47 @@
+[package]
+name = "rs-memstats2ql"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.sysinfo]
+version = "0"
+default-features = false
+features = [
+	"component",
+	"system",
+]
+
+[dependencies.async-graphql]
+version = "7"
+default-features = false
+features = [
+]
+
+[dependencies.tokio]
+version = "1"
+default-features = false
+features = [
+	"sync",
+	"time",
+	"rt-multi-thread",
+]
+
+[dependencies.tokio-stream]
+version = "0"
+default-features = false
+features = [
+]
+
+[dependencies.futures-util]
+version = "0"
+default-features = false
+features = [
+	"async-await",
+	"std",
+]
